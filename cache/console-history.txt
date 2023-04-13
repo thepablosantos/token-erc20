@@ -1,2 +1,5 @@
+console.log("Token deployed to:", token.address);
+const token = await Token.deploy();
+const Token = await ethers.getContractFactory("Token");
 await Token.mint("0x713D30899e89E769A6c37DB677B2d467088b3106", 1000);
 const Token = await ethers.getContractAt("Token", "0x3904C06FCEc530058c54321Dc3055EEbec5205a2");
