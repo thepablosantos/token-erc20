@@ -13,6 +13,7 @@ contract Token is ERC20, ERC20Burnable, Ownable {
     uint8 private constant _decimals = 18;
     // Define o limite máximo para a quantidade total de tokens que podem ser emitidos
     uint256 private constant _maxSupply = 1000000 * 10 ** uint256(_decimals); 
+    string public tokenImage;
 
     // evento emitido quando uma transferência bem-sucedida ocorre, incluindo o comprovante de pagamento e o timestamp
     event Payment(address indexed sender, address indexed recipient, uint256 amount, string paymentProof, uint256 timestamp);
@@ -20,6 +21,7 @@ contract Token is ERC20, ERC20Burnable, Ownable {
     constructor() ERC20("Token", "BRL") {
         // Define o balanço inicial do contrato
         _mint(address(this), 500000 * 10 ** _decimals); 
+        tokenImage = _tokenImage;
     }
 
     // Criação de Tokens
@@ -58,5 +60,10 @@ contract Token is ERC20, ERC20Burnable, Ownable {
         // queima (burn) os tokens da carteira do remetente
         _burn(msg.sender, amount); 
         return true;
+    }
+
+    // Atualizar a variável tokenImage
+    function setTokenImage(string memory _tokenImage) public onlyOwner {
+        tokenImage = _tokenImage;
     }
 }
