@@ -2,9 +2,9 @@
 pragma solidity ^0.8.18;
 
 // Importa contratos de biblioteca do OpenZeppelin para implementação do contrato
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol"; // Traz o contrato ERC20, que implementa a interface padrão de token Ethereum ERC20.
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol"; // Traz o contrato ERC20Burnable, que adiciona funcionalidade de queima (burn) de tokens ao contrato ERC20.
-import "@openzeppelin/contracts/access/Ownable.sol"; //  Traz o contrato Ownable, que implementa um controle de acesso básico, permitindo que o proprietário do contrato execute funções restritas, como a criação de novos tokens.
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
 // Declaração do contrato Token que herda as funcionalidades dos contratos ERC20, ERC20Burnable e Ownable
 contract Token is ERC20, ERC20Burnable, Ownable {
@@ -21,7 +21,7 @@ contract Token is ERC20, ERC20Burnable, Ownable {
     constructor() ERC20("Token", "BRL") {
         // Define o balanço inicial do contrato
         _mint(address(this), 500000 * 10 ** _decimals); 
-        tokenImage = _tokenImage;
+        tokenImage = "https://example.com/fictitious_token_image.png";
     }
 
     // Criação de Tokens
@@ -58,12 +58,12 @@ contract Token is ERC20, ERC20Burnable, Ownable {
         // verifica se o remetente tem saldo suficiente
         require(balanceOf(msg.sender) >= amount, "Insufficient balance"); 
         // queima (burn) os tokens da carteira do remetente
-        _burn(msg.sender, amount); 
+        _burn(msg.sender, amount);
         return true;
     }
 
     // Atualizar a variável tokenImage
     function setTokenImage(string memory _tokenImage) public onlyOwner {
-        tokenImage = _tokenImage;
+    tokenImage = _tokenImage;
     }
 }
