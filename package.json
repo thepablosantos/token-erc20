@@ -12,7 +12,8 @@
   "scripts": {
     "test": "mocha",
     "deploy-mumbai": "hardhat run --network mumbai deploy.js",
-    "console-mumbai": "npx hardhat --network mumbai console"
+    "console-mumbai": "npx hardhat --network mumbai console",
+    "script-mumbai": "hardhat run --network mumbai scripts/interact.js"
 
   },
   "dependencies": {

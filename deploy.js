@@ -6,6 +6,8 @@ async function main() {
   console.log("Deploying contracts with the account:", deployer.address);
 
   const Token = await ethers.getContractFactory("Token");
+  const tokenImage = "https://imgur.com/LUDJSqk"; // Defina o URL da imagem do token aqui
+  const smartToken = await SmartToken.deploy(tokenImage); // Adicione o argumento tokenImage
   const token = await Token.deploy();
 
   console.log("Token address:", token.address);
