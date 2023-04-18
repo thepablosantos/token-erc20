@@ -444,8 +444,8 @@
       ]
     },
     "/mnt/c/Users/iphon/OneDrive/Documentos/Pessoal/tokengit/projetos-pessoais/contracts/Token.sol": {
-      "lastModificationDate": 1681347575385,
-      "contentHash": "9b23dc6c6d3f35caf8686dc771f9d4e4",
+      "lastModificationDate": 1681606821580,
+      "contentHash": "a594aabe330e662430d1d8c6fc2890a9",
       "sourceName": "contracts/Token.sol",
       "solcConfig": {
         "version": "0.8.18",

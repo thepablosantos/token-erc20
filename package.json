@@ -1,8 +1,9 @@
 {
   "devDependencies": {
     "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "chai": "^4.3.7",
     "ethereum-waffle": "^4.0.10",
-    "ethers": "^5.0.0",
+    "ethers": "^5.7.2",
     "hardhat": "^2.13.1",
     "mocha": "^10.2.0"
   },
@@ -14,7 +15,6 @@
     "deploy-mumbai": "hardhat run --network mumbai deploy.js",
     "console-mumbai": "npx hardhat --network mumbai console",
     "script-mumbai": "hardhat run --network mumbai scripts/interact.js"
-
   },
   "dependencies": {
     "@ensdomains/ens-contracts": "^0.0.20",
@@ -238,4 +238,3 @@
   "license": "ISC",
   "description": ""
 }
-
