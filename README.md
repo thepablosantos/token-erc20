@@ -4,7 +4,7 @@
     <li>
       <a href="#example"> Contrato </a>
       <ul>
-        <li><a href="#example"> Criação de tokens </a></li>
+        <li><a href="#descricao"> Descrição </a></li>
         <li><a href="#example"> Transferência de tokens </a></li>
         <li><a href="#example"> Gastar tokens em nome do proprietário </a></li>
         <li><a href="#example"> Retornar tokens </a></li>
